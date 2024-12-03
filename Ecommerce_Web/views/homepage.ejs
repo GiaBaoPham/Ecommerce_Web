@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/homepage.css" />
+    <title><%= pageTitle || 'Homepage' %></title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="advertisement">
+        Summer Sale For All CD Player And Free Express Delivery - OFF 50% - <a href="">ShopNow</a>
+      </div>
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="#">
+            <span>TECH MART</span>
+          </a>
+        </div>        
+        <!-- Search -->
+        <form class="search-bar">
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search" />
+          </div>
+        </form>
+        <!-- Icons -->
+        <nav class="icon-container">
+          <a class="search-icon" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor"><circle cx="11" cy="11" r="6"/><path stroke-linecap="round" d="M11 8a3 3 0 0 0-3 3m12 9l-3-3"/></g></svg>
+          </a>
+          <a class="cart-icon" href="#">
+              <img src="/images/shopping-cart.png">
+          </a>
+          <a class="picture-profile-icon" href="#">
+              <img src="/images/profile-picture.png">
+          </a>         
+        </nav>
+      </nav>
+    </header>
+
+    <!-- Sub Navigation -->
+    <main>
+      <nav class="sub-nav">
+        <ul>
+          <li class="active">
+            <a href=""><strong>HOME</strong></a>
+          </li>
+          <li><a href="">Laptop</a></li>
+          <li><a href="">Phone</a></li>
+          <li><a href="">Screen</a></li>
+          <li><a href="">Mouse</a></li>
+          <li><a href="">Headsphone</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <button class="nav-button left">&lt;</button>
+  
+      <div class="carousel-content">
+        <div class="text-content">
+          <h1>Galaxy S24 FE</h1>
+          <p>Trade in the old for a new one and get an extra 1 million VND. Prepayment offer: Save 500k.</p>
+          <div class="button-group">
+            <button class="learn-more">Learn more</button>
+            <button class="buy-now">Buy now</button>
+          </div>
+        </div>
+        <div class="image-content">
+          <p class="tagline">Galaxy AI is here</p>
+          <img src="/images/videoframe_1732.png" alt="Galaxy S24 FE" />
+        </div>
+      </div>
+  
+      <button class="nav-button right">&gt;</button>
+    </div>
+
+    <!-- Best Seller Section -->
+    <div class="product-best-seller">
+        <% products.forEach(product => { %>
+          <div class="product-card">
+              <div class="pic-product">
+                  <a class="link-to-product-detail" href="#">
+                      <img src="<%= product.image %>" alt="<%= product.name %>">
+                  </a>
+                  <div class="discount-percent"><%= product.discount %>%</div>
+              </div>
+              <div class="product-infor">
+                  <p class="product-name"><%= product.name %></p>
+                  <p class="new-price">$<%= product.newPrice %></p>
+                  <p class="old-price">$<%= product.oldPrice %></p>
+              </div>
+          </div>
+        <% }); %>
+      </div>
+      
+      
+
+    <!-- More Information -->
+    <div class="more-information">
+      <div class="explore">Explore #MustHave</div>
+      <div class="content">
+        <div class="image-content">
+          <img src="/images/sponor_3.webp" alt="IFA 2024 Highlights">
+        </div>
+        <div class="list-section">
+          <p><a href="#">01 - Explore how our AI can support you</a></p>
+          <p><a href="#">02 - Future generations striving for a sustainable future</a></p>
+          <p><a href="#">03 - Tips for embracing major changes in life</a></p>
+          <p><a href="#">04 – Canapés made from roasted bell peppers and ricotta cheese</a></p>
+          <p><a href="#">05 - Perfect outdoor activities for a sunny day</a></p>
+        </div>
+      </div>
+      <div class="extra-images">
+        <img src="/images/sponor_1.webp" alt="Laundry Solution" style="width: 45%; margin-top: 20px;">
+        <img src="/images/sponor_2.webp" alt="Kitchen" style="width: 45%; margin-top: 20px;">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-column">
+            <strong>Support</strong>
+            <ul>
+              <li>
+                <a href="#">HanHuyen, Thu Duc, HCM</a>
+              </li>
+              <li>
+                <a href="#">lapshop@gmail.com</a>
+              </li>
+              <li>
+                <a href="#">555-555-555</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <strong>Account</strong>
+            <ul>
+              <li>
+                <a href="#">My account</a>
+              </li>
+              <li>
+                <a href="#">Login / Register</a>
+              </li>
+              <li>
+                <a href="#">Cart</a>
+              </li>
+              <li>
+                <a href="#">Shop</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <strong>Quick link</strong>
+            <ul>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">Term of uses</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <strong>Contact</strong>
+            <div class="contact-icons">
+              <a href=""> <i class="fa-brands fa-facebook"></i></a>
+              <a href=""> <i class="fa-brands fa-x-twitter"></i></a>
+              <a href=""> <i class="fa-brands fa-instagram"></i></a>
+              <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-column">
+            <div class="copyright">
+              &copy;Copyright Rimel 2022.All right reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
